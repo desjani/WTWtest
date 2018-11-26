@@ -7,7 +7,11 @@ nginx:
       - pkg: nginx
       - file: /etc/nginx/sites-avaliable/default
       - file: /usr/share/nginx/html/custom_404.html
-      
+
+ufw:
+  applications:
+    - Nginx HTTP
+    
 /etc/nginx/sites-enabled/default:
   file:
     - managed
